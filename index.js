@@ -13,4 +13,20 @@ const wrapAdjective = (emph = "*") => {
     }
 };
 
-const Calculator = {}
+const Calculator = { 
+    add: (num1, num2) => { return num1 + num2 }, 
+    subtract: (num1, num2) => { return num1 - num2 },
+    multiply: (num1, num2) => { return num1 * num2 },
+    divide: (num1, num2) => { return num1 / num2 }
+};
+
+const actionApplyer = (integer, arrayOfFunctions) => {
+    if (arrayOfFunctions.length === 0){ 
+        return integer;
+     } else {
+         return arrayOfFunctions.reduce((resultant, element) => { 
+                resultant = element(resultant)
+                return resultant
+            }, integer)
+     }  
+    };
