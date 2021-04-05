@@ -12,3 +12,5 @@ const wrapAdjective = (emph = "*") => {
         return `You are ${emph}${adj}${emph}!`
     }
 };
+
+const Calculator = {}
