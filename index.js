@@ -25,8 +25,7 @@ const actionApplyer = (integer, arrayOfFunctions) => {
         return integer;
      } else {
          return arrayOfFunctions.reduce((resultant, element) => { 
-                resultant = element(resultant)
-                return resultant
+                return (resultant = element(resultant))
             }, integer)
      }  
-    };
+};
